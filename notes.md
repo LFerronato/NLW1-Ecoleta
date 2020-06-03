@@ -12,7 +12,45 @@
   o back que gerencia e retorna todo o HTML e CSS
 
 # REST
-  o back manipula JSON, e o front fica o HTML e CSS, deixando a comunicação mais leve
+  o back manipula JSON, e o front fica o HTML e CSS, deixando a comunicação 
+  mais leve
 
 ## TYPESCRIPT
- -- Ele facilita e fortalece o codigo, ajuda o desenvolvedor e os times, principalmente no futuro!
+ -- Ele facilita e fortalece o codigo, ajuda o desenvolvedor e os times, 
+ principalmente no futuro!
+
+## *************************************** PADROES *****************************
+-- Usar para nomes de funcioes de um controller:
+  >index    (listar itens)
+  >show     (mostrar um item)
+  >create   (criar um item)
+  >update   (atualizar um item)
+  >delete   (deletar um item)
+ _______________________________________________________________________________
+
+ ## Entidade do banco de dados
+ - points (Pontos de Coleta)
+    >image
+    >name
+    >email
+    >whatsapp
+    >latitude
+    >longitude
+    >city
+    >uf
+ - items (Itens de Coleta)
+    >image
+    >title
+ - point_items (N-N | tabela 'pivot' | Itens que um ponto coleta)
+    >point_id
+    >item_id
+ _______________________________________________________________________________
+
+ ## Funcionalidades da aplicação
+  # WEB
+    [ ] Cadastro de ponto de coleta
+    [x] Lista os itens de coleta
+  # MOBILE
+    [ ] Listar pontos (filtro por estado/cidade/itens)
+    [ ] Listar um ponto de coleta específico
+    '''desafio: atualizar ponto/itens'''
