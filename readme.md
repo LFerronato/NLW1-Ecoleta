@@ -48,9 +48,9 @@
 
  ## Funcionalidades da aplicação
   # WEB
-    [ ] Cadastro de ponto de coleta
+    [x] Cadastro de ponto de coleta
     [x] Lista os itens de coleta
   # MOBILE
-    [ ] Listar pontos (filtro por estado/cidade/itens)
-    [ ] Listar um ponto de coleta específico
+    [x] Listar pontos (filtro por estado/cidade/itens)
+    [x] Listar um ponto de coleta específico
     '''desafio: atualizar ponto/itens'''
