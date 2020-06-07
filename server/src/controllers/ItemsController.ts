@@ -1,4 +1,5 @@
 import { Request, Response } from 'express'
+import dotenv from 'dotenv'
 import cnn from '../database/connection'
 
 class ItemsController {
@@ -7,11 +8,13 @@ class ItemsController {
 
     const serializedItems = items.map(item => {
       // DUAS OPÇÕES...
-      item.image_url = `http://localhost:3333/uploads/${item.image}`
-      // delete item.id
-      item.image = undefined
+      dotenv.config()
+      item.image_url = `${process.env.HOST_SERVER}/uploads/${item.image}`
+      delete item.image
+
       return item
       // return {
+      //   id: item.id
       //   title: item.title,
       //   image_url: `http://localhost:3333/uploads/${item.image}`
       // }

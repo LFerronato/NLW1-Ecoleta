@@ -151,7 +151,7 @@ const CreatePoint = () => {
             <label htmlFor="name">Nome da entidade</label>
             <input
               type="text"
-              name='name'
+              name='nome'
               id='name'
               onChange={handleInputChange}
             />
