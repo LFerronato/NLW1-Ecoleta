@@ -1,5 +1,6 @@
 # demo add um novo Botão: "Como chegar?" no app mobile
-![](.\videos\button-comochegar.mov)
+[![IMAGE ALT TEXT](http://img.youtube.com/vi/45GvfjIXpXE/0.jpg)]
+(https://youtu.be/45GvfjIXpXE "Exemplo")
 
 
 
