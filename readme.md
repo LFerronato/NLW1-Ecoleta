@@ -1,3 +1,7 @@
+### demo add um novo Botão: "Como chegar?" no app mobile
+https://www.youtube.com/embed/-2ydDvdFP1Gs
+
+# ANOTAÇÕES DO BACKEND
 ## API RESTful
 
 > Responsabilidade do Back-end
@@ -7,11 +11,11 @@
   - Autenticação de usuários
   - Criptografia e segurança
 
-## Estruturas:
-# MVC (Model/View/Controller)
+# Estruturas:
+## MVC (Model/View/Controller)
   o back que gerencia e retorna todo o HTML e CSS
 
-# REST
+## REST
   o back manipula JSON, e o front fica o HTML e CSS, deixando a comunicação 
   mais leve
 
