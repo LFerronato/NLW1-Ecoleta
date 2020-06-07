@@ -1,6 +1,5 @@
 ## demo add um novo Botão: "Como chegar?" no app mobile
-[!(https://youtu.be/2ydDvdFP1Gs "Exemplo")]
-
+<iframe  title="YouTube video player" width="480" height="390" src="http://www.youtube.com/watch?v=2ydDvdFP1Gs?autoplay=1" frameborder="0" allowfullscreen></iframe>
 
 
 # ANOTAÇÕES DO BACKEND
