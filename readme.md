@@ -1,5 +1,5 @@
 # demo add um novo Botão: "Como chegar?" no app mobile
-![](./videos/button-comochegar.mov)
+![](.\videos\button-comochegar.mov)
 
 
 
