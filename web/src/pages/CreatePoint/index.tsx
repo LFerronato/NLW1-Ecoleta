@@ -8,6 +8,7 @@ import api from '../../services/api'
 
 import './styles.css'
 
+import Dropzone from '../../components/Dropzone'
 import logo from '../../assets/logo.svg'
 
 
@@ -41,11 +42,11 @@ const CreatePoint = () => {
     whatsapp: ''
   })
 
-  const [itemsSelected, setItemsSelected] = useState<number[]>([])
-
   const [selectedUf, setSelectedUf] = useState('0')
   const [selectedCity, setSelectedCity] = useState('0')
+  const [itemsSelected, setItemsSelected] = useState<number[]>([])
   const [selectedPosition, setSelectedPosition] = useState<[number, number]>([0, 0])
+  const [selectedFile, setSelectedFile] = useState<File>()
 
   const history = useHistory()
 
@@ -111,16 +112,21 @@ const CreatePoint = () => {
   async function handleSubmit(event: FormEvent) {
     event.preventDefault()
 
-    const data = {
-      "name": formData.nome,
-      "email": formData.email,
-      "whatsapp": formData.whatsapp,
-      "latitude": selectedPosition[0],
-      "longitude": selectedPosition[1],
-      "city": selectedCity,
-      "uf": selectedUf,
-      "items": itemsSelected
+    const data = new FormData()
+
+    data.append('name', formData.nome)
+    data.append('email', formData.email)
+    data.append('whatsapp', formData.whatsapp)
+    data.append('latitude', String(selectedPosition[0]))
+    data.append('longitude', String(selectedPosition[1]))
+    data.append('city', selectedCity)
+    data.append('uf', selectedUf)
+    data.append('items', itemsSelected.join(","))
+
+    if (selectedFile) {
+      data.append('image', selectedFile)
     }
+
     try {
       await api.post('points', data)
       history.push('/')
@@ -138,9 +144,9 @@ const CreatePoint = () => {
           Voltar para home
         </Link>
       </header>
-
       <form onSubmit={handleSubmit}>
         <h1>Cadastro do <br /> ponto de coleta</h1>
+        <Dropzone onFileUpload={setSelectedFile} />
 
         <fieldset>
           <legend>
